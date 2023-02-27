@@ -1,0 +1,29 @@
+html[data-theme='light'] {
+  --main-background-color: #f0f2f5;
+  --main-elements-background-color: white;
+  --main-text-color: #222;
+  --main-border: 1px solid lightgrey;
+  --sidebar-elements-hover-color: lightgrey;
+  --button-background-color: lightgrey;
+  --button-hover-background-color: silver;
+  --button-text-color: #222;
+  --input-background-color: gainsboro;
+  --input-text-color: black;
+  --input-border-color: blue;
+  --scroll-color: grey;
+}
+
+html[data-theme='dark'] {
+  --main-background-color: #111;
+  --main-elements-background-color: #222;
+  --main-text-color: lightgrey;
+  --main-border: 1px solid black;
+  --sidebar-elements-hover-color: #222;
+  --button-background-color: #444;
+  --button-hover-background-color: #555;
+  --button-text-color: lightgrey;
+  --input-background-color: #444;
+  --input-text-color: lightgrey;
+  --input-border-color: lightblue;
+  --scroll-color: #444;
+}

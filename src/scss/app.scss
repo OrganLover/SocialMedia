@@ -1,0 +1,38 @@
+@import './vars';
+@import './libs/normalize';
+@import './components/all';
+
+* {
+  font-family: 'Alexandria', sans-serif;
+  text-decoration: none;
+  color: var(--main-text-color);
+  transition: color 0.5s;
+  list-style: none;
+}
+
+html {
+  background-color: var(--main-background-color);
+  transition: background-color 0.2s;
+}
+
+.mainWrapper {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    'header header'
+    'sidebar content';
+  gap: 25px;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .mainContent {
+    padding: 15px;
+    grid-area: content;
+    border-radius: 10px;
+    background-color: var(--main-elements-background-color);
+    border: var(--main-border);
+    transition: background-color 0.2s, color 0.2s, border 1s;
+  }
+}

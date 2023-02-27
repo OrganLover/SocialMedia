@@ -1,0 +1,31 @@
+.themeToggler {
+  width: 52px;
+  height: 28px;
+  background-color: #666;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.themeToggler img {
+  z-index: 1;
+}
+
+.themeToggler:before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  position: absolute;
+  left: 1px;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+
+.themeTogglerDarkMode:before {
+  left: 26px;
+}

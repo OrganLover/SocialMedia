@@ -1,0 +1,54 @@
+.usersPage {
+  .usersPagination {
+    .paginationButtonsList {
+      display: flex;
+      justify-content: center;
+      margin: 1px;
+      font-size: 20px;
+      padding-inline-start: 0;
+
+      .activePortion {
+        background-color: #5c62ec;
+      }
+
+      li {
+        list-style: none;
+        margin: 1px;
+      }
+
+      button {
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .users {
+    .user {
+      padding: 10px;
+      display: flex;
+
+      .userAvatarWrapper {
+        .userAvatar {
+          width: 75px;
+          border-radius: 100%;
+        }
+      }
+
+      .userInfo {
+        position: relative;
+
+        span {
+          display: block;
+        }
+
+        .userFollowButton {
+          position: absolute;
+          bottom: 5px;
+          left: 0;
+        }
+      }
+    }
+  }
+}

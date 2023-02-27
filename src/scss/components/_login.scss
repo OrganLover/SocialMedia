@@ -1,0 +1,82 @@
+@import '../mixins';
+
+.loginPage {
+  .loginBlock {
+    text-align: center;
+    background-color: var(--main-elements-background-color);
+    border: var(--main-border);
+    margin-top: 75px;
+    padding: 25px;
+    width: 50%;
+    height: 400px;
+    margin-left: 300px;
+    border-radius: 25px;
+    transition: 0.5s ease;
+
+    &:hover {
+      transition: 0.5s ease;
+      box-shadow: 20px 20px 1px 1px #9400d3, -20px -20px 1px 1px #ffa500;
+      box-shadow: 20px 20px 1px 1px peachpuff, -20px -20px 1px 1px lightskyblue;
+    }
+
+    .loginHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .loginLogo {
+        text-align: left;
+        font-size: 30px;
+      }
+    }
+
+    .loginForm {
+      margin-top: 75px;
+
+      .textField {
+        margin-bottom: 20px;
+        width: 35%;
+        height: calc(2.25rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #bdbdbd;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+
+      #loginButton {
+        font-size: 25px;
+        margin-top: 20px;
+        text-align: center;
+        border: 0;
+        border-radius: 10px;
+        background: linear-gradient(to left, #9400d3, #ffa500);
+        width: 100px;
+        padding-bottom: 5px;
+        cursor: pointer;
+      }
+
+      .rememberMe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        label {
+          display: inline-block;
+          font-size: 20px;
+        }
+
+        input {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

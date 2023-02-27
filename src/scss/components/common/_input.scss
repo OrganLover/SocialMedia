@@ -1,0 +1,13 @@
+input {
+  background-color: var(--input-background-color);
+  border: 1.5px solid black;
+  border-radius: 3px;
+  color: var(--input-text-color);
+
+  &:focus {
+    border: 1.5px solid var(--input-border-color);
+    outline: 0;
+  }
+
+  transition: background-color 0.5s, color 0.5s;
+}

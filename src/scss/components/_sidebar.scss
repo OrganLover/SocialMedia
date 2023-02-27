@@ -1,0 +1,28 @@
+.sidebar {
+  grid-area: sidebar;
+
+  .links {
+    padding-inline-start: 0;
+    margin-block: 0;
+
+    .linkWrapper {
+      cursor: pointer;
+      list-style: none;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: var(--sidebar-elements-hover-color);
+      }
+
+      .link {
+        display: block;
+        padding: 10px 0;
+
+        .linkText {
+          padding-left: 10px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

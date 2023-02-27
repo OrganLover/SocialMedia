@@ -1,0 +1,149 @@
+.profilePage {
+  .profileInfo {
+    display: flex;
+
+    .profileAvatarAndStatus {
+      .profileStatusBlock {
+        .profileStatus {
+          width: 200px;
+          height: 25px;
+          background-color: var(--button-background-color);
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+        }
+
+        .ownerProfileStatus {
+          cursor: pointer;
+        }
+
+        .editStatusButton {
+          position: absolute;
+          top: -18px;
+          right: -18px;
+          padding-inline: 2px;
+          border-radius: 100%;
+          background-color: var(--button-background-color);
+        }
+
+        .statusEditModal {
+          text-align: center;
+        }
+      }
+
+      .profileAvatarBlock {
+        width: 200px;
+
+        .avatarWrapper {
+          background-color: black;
+          border-radius: 100%;
+          position: relative;
+
+          .avatarHoverContent {
+            color: white;
+            font-size: 25px;
+            position: absolute;
+            left: 15px;
+            top: 85px;
+            pointer-events: none;
+            visibility: hidden;
+          }
+
+          .profileAvatar {
+            width: 100%;
+            border-radius: 100%;
+          }
+
+          .ownerProfileAvatar:hover {
+            opacity: 0.5;
+            cursor: pointer;
+
+            &:hover + .avatarHoverContent {
+              visibility: visible;
+            }
+          }
+        }
+
+        .avatarModalWindow {
+          .saveButton {
+            position: absolute;
+            bottom: 25px;
+            right: 30px;
+            font-size: 20px;
+            width: 60px;
+            height: 30px;
+          }
+        }
+      }
+    }
+
+    .profileData {
+      margin-left: 50px;
+      position: relative;
+      display: flex;
+
+      .profileDataContacts {
+        width: 100px;
+        border-radius: 5px;
+        background-color: var(--button-background-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+
+        .arrowDown {
+          margin: 2px 2px;
+        }
+      }
+
+      .changeProfileDataButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0;
+        background-color: var(--main-elements-background-color);
+      }
+
+      .contacts {
+        padding-left: 20px;
+        list-style: none;
+        font-weight: bold;
+      }
+
+      .editList {
+        .editListItem {
+          display: flex;
+          margin: 10px;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  .profilePosts {
+    .profilePost {
+      margin-block: 20px;
+
+      .postBlock {
+        margin-block: 10px;
+      }
+
+      .postAvatar {
+        img {
+          width: 50px;
+          border-radius: 100%;
+        }
+      }
+
+      .postButtons {
+        button {
+          margin-inline: 3px;
+        }
+      }
+    }
+  }
+}
