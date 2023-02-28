@@ -31,13 +31,19 @@ const ProfileData = ({ setModalOpened, profile, isOwner, ...props }) => {
   return (
     <>
       <ul>
-        <li>Full name: {profile.fullName}</li>
-        <li>About me: {profile.aboutMe}</li>
         <li>
-          Looking for a job:{' '}
-          {profile.lookingForAJob === true ? 'positive' : 'negative'}
+          Full name: <b>{profile.fullName}</b>
         </li>
-        <li>The job i am looking for: {profile.lookingForAJobDescription}</li>
+        <li>
+          About me: <b>{profile.aboutMe}</b>
+        </li>
+        <li>
+          Looking for a job:
+          <b> {profile.lookingForAJob === true ? 'positive' : 'negative'}</b>
+        </li>
+        <li>
+          The job i am looking for: <b>{profile.lookingForAJobDescription}</b>
+        </li>
         <li>
           <div
             className='profileDataContacts'
@@ -49,8 +55,8 @@ const ProfileData = ({ setModalOpened, profile, isOwner, ...props }) => {
             Object.keys(profile.contacts).map((item) => {
               return (
                 <div key={item} className='contacts'>
-                  {icons[index++]} :{' '}
-                  <a href={profile.contacts[item]}>{profile.contacts[item]}</a>
+                  {icons[index++]} :
+                  <a href={profile.contacts[item]}> {profile.contacts[item]}</a>
                 </div>
               )
             })}

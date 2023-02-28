@@ -5,7 +5,7 @@ const SET_USERS = 'users/SET-USERS'
 const SET_CURRENT_PAGE = 'users/SET-CURRENT-PAGE'
 
 const initialState = {
-  usersPerPage: 5,
+  usersPerPage: 4,
   currentNumberOfPortion: 1,
   totalUsersCount: 0,
   users: null

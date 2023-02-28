@@ -4,6 +4,7 @@
 
     .profileAvatarAndStatus {
       .profileStatusBlock {
+        overflow: hidden;
         .profileStatus {
           width: 200px;
           height: 25px;
@@ -11,23 +12,11 @@
           border-radius: 5px;
           display: flex;
           align-items: center;
+          margin-block: 10px;
         }
 
         .ownerProfileStatus {
           cursor: pointer;
-        }
-
-        .editStatusButton {
-          position: absolute;
-          top: -18px;
-          right: -18px;
-          padding-inline: 2px;
-          border-radius: 100%;
-          background-color: var(--button-background-color);
-        }
-
-        .statusEditModal {
-          text-align: center;
         }
       }
 

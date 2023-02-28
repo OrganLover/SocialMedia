@@ -9,10 +9,10 @@ const SET_POST_LIKE = 'profile/SET-POST-LIKE'
 let initialState = {
   PostsData: [
     { id: 1, likes: 7, comments: 2, message: 'Yo, this is my first post!' },
-    { id: 2, likes: 2, comments: 0, message: 'Yo, how are you homies?!' },
-    { id: 3, likes: 0, comments: 0, message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem vitae illum, minima voluptatibus explicabo ad rem similique quos obcaecati ea impedit mollitia aliquam soluta, magni, voluptates nisi quo dolorem laborum.' }
+    { id: 2, likes: 3, comments: 1, message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem vitae illum, minima voluptatibus explicabo ad rem similique quos obcaecati ea impedit mollitia aliquam soluta, magni, voluptates nisi quo dolorem laborum.' },
+    { id: 3, likes: 0, comments: 0, message: 'Posts are local' },
   ],
-  userLikedPostsIds: [3],
+  userLikedPostsIds: [],
   profile: null,
   status: '',
   isFollowed: null,
@@ -46,26 +46,22 @@ const profileReducer = (state = initialState, action) => {
         PostsData: [...state.PostsData.map(post => {
           if (post.id === action.postId) {
             if (state.userLikedPostsIds.some(item => item === action.postId)) {
-              debugger
               return { ...post, likes: post.likes - 1 }
             }
             else {
-              debugger
               return { ...post, likes: post.likes + 1 }
             }
           }
           return post
         })],
-        userLikedPostsIds: [state.userLikedPostsIds.map(item => {
+        userLikedPostsIds: [...state.userLikedPostsIds.map(item => {
           if (item === action.postId) {
-            debugger
             return
           }
           else {
-            debugger
             return item
           }
-        })]
+        }), state.userLikedPostsIds.some(item => item === action.postId) ? null : action.postId],
       }
 
     default: return state
@@ -96,6 +92,9 @@ export const getUserStatus = (userId) => async (dispatch) => {
   const response = await profileAPI.getUserStatus(userId)
   if (response) {
     dispatch(setUserStatus(response))
+  }
+  else {
+    dispatch(setUserStatus(null))
   }
 }
 

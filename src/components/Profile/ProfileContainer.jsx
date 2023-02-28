@@ -17,6 +17,7 @@ const ProfileContainer = ({
   updateUserAvatar,
   ownerUserId,
   setPostLike,
+  getUserStatus,
   ...props
 }) => {
   let { userId } = useParams()

@@ -18,6 +18,7 @@ const UsersContainer = ({
   currentNumberOfPortion,
   followUser,
   unfollowUser,
+  ownerUserId,
   ...props
 }) => {
   useEffect(() => {
@@ -36,6 +37,7 @@ const UsersContainer = ({
         users={users}
         followUser={followUser}
         unfollowUser={unfollowUser}
+        ownerUserId={ownerUserId}
       />
     </div>
   )
@@ -47,6 +49,7 @@ const mapStateToProps = (state) => {
     totalUsersCount: state.usersPage.totalUsersCount,
     usersPerPage: state.usersPage.usersPerPage,
     currentNumberOfPortion: state.usersPage.currentNumberOfPortion,
+    ownerUserId: state.auth.ownerUserId,
   }
 }
 

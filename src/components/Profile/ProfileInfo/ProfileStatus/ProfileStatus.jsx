@@ -21,10 +21,6 @@ const ProfileStatus = ({
     setEditMode(false)
   }
 
-  const onChangeHandler = (e) => {
-    setStatusContent(e.target.value)
-  }
-
   return (
     <div className='profileStatusBlock'>
       {isOwner ? (
@@ -42,7 +38,7 @@ const ProfileStatus = ({
                 type='text'
                 autoFocus
                 value={statusContent}
-                onChange={onChangeHandler}
+                onChange={(e) => setStatusContent(e.target.value)}
               />
               <div>
                 <button onClick={onClickHandler}>save</button>
@@ -52,7 +48,9 @@ const ProfileStatus = ({
           )}
         </>
       ) : (
-        <span className='profileStatus'>{profileStatus}</span>
+        <span className='profileStatus'>
+          {profileStatus ? profileStatus : 'no status'}
+        </span>
       )}
     </div>
   )
