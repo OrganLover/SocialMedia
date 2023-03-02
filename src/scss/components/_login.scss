@@ -1,6 +1,10 @@
 @import '../mixins';
 
 .loginPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   .loginBlock {
     text-align: center;
     background-color: var(--main-elements-background-color);
@@ -9,7 +13,6 @@
     padding: 25px;
     width: 50%;
     min-height: 400px;
-    margin-left: 300px;
     border-radius: 25px;
     transition: 0.5s ease;
 

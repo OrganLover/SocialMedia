@@ -24,6 +24,7 @@ const LoginForm = ({ onSubmit, theme, setTheme, captchaUrl, ...props }) => {
               validate={required}
               className='textField'
               placeholder='Email'
+              initialValue='yunusovdinar.pro@gmail.com'
             />
             <Field
               name='password'
@@ -32,6 +33,7 @@ const LoginForm = ({ onSubmit, theme, setTheme, captchaUrl, ...props }) => {
               className='textField'
               placeholder='Password'
               type='password'
+              initialValue='ForTesters'
             />
             {captchaUrl && (
               <div>
