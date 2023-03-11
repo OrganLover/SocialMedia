@@ -25,6 +25,26 @@ const Login = ({ isAuth, login, captchaUrl, ...props }) => {
         </div>
         <LoginForm onSubmit={onSubmit} captchaUrl={captchaUrl} />
       </div>
+      <div className='instructionBlock'>
+        <span>
+          if authorization does not work please open this app in{' '}
+          <b>Google Chrome</b> or in <b>Microsoft Edge</b>. You can fix the
+          problem in your browser using the instruction below:
+        </span>
+        <ol>
+          <li>
+            visit the API site{' '}
+            <a
+              href='https://social-network.samuraijs.com'
+              style={{ textDecoration: 'underline' }}
+            >
+              https://social-network.samuraijs.com
+            </a>
+          </li>
+          <li>close the API site</li>
+          <li>try to authorize again</li>
+        </ol>
+      </div>
     </div>
   )
 }

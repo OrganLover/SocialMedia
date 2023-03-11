@@ -5,8 +5,18 @@
   justify-content: center;
   align-items: center;
 
+  .instructionBlock {
+    // background-color: red;
+    width: 350px;
+    margin-left: 25px;
+    ol li {
+      list-style-type: decimal;
+    }
+  }
+
   .loginBlock {
     text-align: center;
+    position: relative;
     background-color: var(--main-elements-background-color);
     border: var(--main-border);
     margin-block: 70px;
