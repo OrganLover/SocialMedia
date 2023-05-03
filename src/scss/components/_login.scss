@@ -4,11 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  padding-inline: 10px;
+  height: 100vh;
 
   .instructionBlock {
-    // background-color: red;
-    width: 350px;
-    margin-left: 25px;
     ol li {
       list-style-type: decimal;
     }
@@ -19,10 +19,10 @@
     position: relative;
     background-color: var(--main-elements-background-color);
     border: var(--main-border);
-    margin-block: 70px;
     padding: 25px;
-    width: 50%;
-    min-height: 400px;
+    width: 90%;
+    max-width: 600px;
+    min-height: 350px;
     border-radius: 25px;
     transition: 0.5s ease;
 
@@ -44,7 +44,7 @@
     }
 
     .loginForm {
-      margin-top: 75px;
+      margin-top: 50px;
 
       .textField {
         margin-bottom: 20px;

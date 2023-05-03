@@ -18,13 +18,6 @@ const Login = ({ isAuth, login, captchaUrl, ...props }) => {
 
   return (
     <div className='loginPage'>
-      <div className='loginBlock'>
-        <div className='loginHeader'>
-          <div className='loginLogo'>LO GO</div>
-          <ThemeToggler />
-        </div>
-        <LoginForm onSubmit={onSubmit} captchaUrl={captchaUrl} />
-      </div>
       <div className='instructionBlock'>
         <span>
           if authorization does not work please open this app in{' '}
@@ -44,6 +37,13 @@ const Login = ({ isAuth, login, captchaUrl, ...props }) => {
           <li>close the API site</li>
           <li>try to authorize again</li>
         </ol>
+      </div>
+      <div className='loginBlock'>
+        <div className='loginHeader'>
+          <div className='loginLogo'>LO GO</div>
+          <ThemeToggler />
+        </div>
+        <LoginForm onSubmit={onSubmit} captchaUrl={captchaUrl} />
       </div>
     </div>
   )
